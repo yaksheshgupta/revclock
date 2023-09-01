@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background: url('../nycbg.webp') center center;
+    background-size: cover;
+    font-style: italic;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.title {
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.col {
+    margin-top: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.col div {
+    width: 250px;
+    text-align: center;
+}
+
+input {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.55);
+    border-color: transparent;
+    border-radius: 5px;
+    height: 8vh;
+    text-align: center;
+    font-size: 30px;
+}
+.inp-button{
+    padding: 1.25rem;
+    background-color:beige;
+}
+.countdown-message{
+    color: red;
+    font-size: 50px;
+}
