@@ -10,7 +10,7 @@
     height: 100vh;
     background: url('../nycbg.webp') center center;
     background-size: cover;
-    font-style: italic;
+    text-decoration-style: dashed;
 }
 
 .overlay {
@@ -27,20 +27,28 @@
     color: white;
     text-align: center;
     font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration-style: dashed;
+    
 }
 
+
 .col {
-    margin-top: 20px;
+    margin-top: 50px;
     width: 90%;
     display: flex;
     justify-content: center;
     color: white;
+    margin-bottom: 20px;
 }
 
 .col div {
-    width: 250px;
+    width: 200px;
     text-align: center;
+    margin-bottom: 20px;
 }
+
 
 input {
     width: 50%;
@@ -51,11 +59,59 @@ input {
     text-align: center;
     font-size: 30px;
 }
+/*#user-date {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}*/
+
+#user-date {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none; 
+    transition: border-color 0.2s ease; 
+    background-color: white;
+    opacity: 0.5;
+  }
+  
+  
+  #user-date:hover {
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+    font-size: 16px;
+    border-color: transparent; 
+  }
+  
+  
+  #user-date:focus {
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+  }
+  
 .inp-button{
     padding: 1.25rem;
-    background-color:beige;
+    background-color:white;
+    opacity: 0.5;
+    padding: 10px 20px;
+    margin-right: 7vh;
+    margin-left: 10vh;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
+.inp-button:hover {
+    background-color: #000204;
+    color: white;
+}
+
 .countdown-message{
-    color: red;
-    font-size: 50px;
+    color: rgba(10, 0, 0, 0.747);
+    font-size: 30px;
 }
