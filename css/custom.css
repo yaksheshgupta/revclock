@@ -115,3 +115,21 @@ input, .inp-button {
     font-size: 30px;
     transition: color 0.3s ease;
 }
+@media (max-width :600px) {
+    .col {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    width: 90%;
+    display: flex;
+    }
+
+    .col div {
+        width: 100%;
+    }
+
+    .main {
+        background-size: cover;
+    }
+
+    
+}
