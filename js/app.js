@@ -1,7 +1,12 @@
 const inputs = document.querySelectorAll("input");
 const startCountdownBtn = document.getElementById("start-countdown");
 const countdownMessage = document.getElementById("countdown-message");
+const rightNowMessage = document.getElementById("rightNowMessage");
 let intervalId;
+
+function present_time() {
+    rightNowMessage.textContent="ubiewbunbu";
+}
 
 function clock(endDate) {
     const end = new Date(endDate);
