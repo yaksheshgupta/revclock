@@ -5,9 +5,12 @@ const rightNowMessage = document.getElementById("rightNowMessage");
 let intervalId;
 
 function present_time() {
-    rightNowMessage.textContent="ubiewbunbu";
+    rightNowMessage.textContent = new Date();
+    setInterval(() => {
+        present_time()
+    }, 1000);
 }
-
+present_time()
 function clock(endDate) {
     const end = new Date(endDate);
     const now = new Date();
@@ -15,7 +18,7 @@ function clock(endDate) {
 
     if (diff < 0) {
         countdownMessage.textContent = "Countdown has ended!";
-        clearInterval(intervalId); 
+        clearInterval(intervalId);
         return;
     }
 
@@ -35,7 +38,7 @@ startCountdownBtn.addEventListener("click", () => {
         return;
     }
 
-    clearInterval(intervalId); 
+    clearInterval(intervalId);
     clock(userEndDate);
 
     intervalId = setInterval(() => {
