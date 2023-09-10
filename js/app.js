@@ -5,12 +5,21 @@ const rightNowMessage = document.getElementById("rightNowMessage");
 let intervalId;
 
 function present_time() {
-    rightNowMessage.textContent = new Date();
-    setInterval(() => {
-        present_time()
-    }, 1000);
+    const options = {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        hour12: true
+    };
+    const currentDate = new Date();
+    const formattedDate = currentDate.toLocaleDateString("en-US", options);
+    const formattedDateWithoutAt = formattedDate.replace("at", "");
+    rightNowMessage.textContent = formattedDateWithoutAt;
 }
-present_time()
+
 function clock(endDate) {
     const end = new Date(endDate);
     const now = new Date();
@@ -22,10 +31,16 @@ function clock(endDate) {
         return;
     }
 
-    inputs[1].value = Math.floor(diff / 3600 / 24);
-    inputs[2].value = Math.floor(diff / 3600) % 24;
-    inputs[3].value = Math.floor(diff / 60) % 60;
-    inputs[4].value = Math.floor(diff) % 60;
+    const days = Math.floor(diff / (3600 * 24)); // Calculate days
+    const hours = Math.floor((diff % (3600 * 24)) / 3600); // Calculate hours
+    const minutes = Math.floor((diff % 3600) / 60); // Calculate minutes
+    const seconds = Math.floor(diff % 60); // Calculate seconds
+
+    inputs[1].value = days;
+    inputs[2].value = hours;
+    inputs[3].value = minutes;
+    inputs[4].value = seconds;
+
     countdownMessage.textContent = "";
 }
 
@@ -45,3 +60,9 @@ startCountdownBtn.addEventListener("click", () => {
         clock(userEndDate);
     }, 1000);
 });
+
+present_time();
+
+setInterval(() => {
+    present_time();
+}, 10);
